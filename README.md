@@ -1,6 +1,14 @@
 # TitanicDataset
 Different machine learning approaches for the Kaggle Titanic Dataset
 
+## Feature Engineering
+
+The 'Name', 'Ticket', 'Cabin', and 'Embarked' fields were dropped as I judged them to have no relevance to the survival rate. 
+
+## Data Cleaning
+
+The 'Sex' column was replaced by the one-hot encoded columns of male and female. The missing gaps in 'Age' and 'Fare' columns were replaced by their mean values. 
+
 ## Random Forest Classification
 
 Using sklearn, a random forest classifier was used on the dataset. 
@@ -20,3 +28,13 @@ A gradient boosted tree classification was trained on this dataset using the skl
 Grid search 3-fold cross validation was done on the n_estimators=200, max_depth=4 and learning_rate=0.01 parameters. 
 
 Using the best estimators, an accuracy of 76.555% was achieved, which was also seen before on the overfit random forest classification. This model does not turn out to be better.
+
+## Voting Classification
+
+A voting classifier from the sklearn package was used for the purposes of this classification.
+
+A voting classification was done on the basis of hard majority rule voting, from classifiers: Linear SVC, Random Forest, Gradient Boosted Trees, and Logistic Regression.
+
+Grid search 3-fold cross validation was done to find the optimal settings of each classifier. Random Forest and Gradient Boosted Trees optimal settings have already been discussed as separate classification attempts. SVC was found optimal for the linear kernel, and logistic regression classifier had essentially the same accuracy and output regardless of regularization settings.
+
+This ensemble of classifiers produced a much higher accuracy of 78.468% compared to earlier attempts. 
