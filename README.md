@@ -25,9 +25,9 @@ UPDATE: Further grid search analysis on tighter, closer ranges was done to find 
 
 A gradient boosted tree classification was trained on this dataset using the sklearn module.
 
-Grid search 3-fold cross validation was done on the n_estimators=200, max_depth=4 and learning_rate=0.01 parameters. 
+Grid search 3-fold cross validation was done on the n_estimators, max_depth and learning_rate parameters. 
 
-Using the best estimators, an accuracy of 76.555% was achieved, which was also seen before on the overfit random forest classification. This model does not turn out to be better.
+Using the best estimators (n_estimators=200, max_depth=4 and learning_rate=0.01), an accuracy of 76.555% was achieved, which was also seen before on the overfit random forest classification. This model does not turn out to be better.
 
 ## Voting Classification
 
